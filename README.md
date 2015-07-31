@@ -1,8 +1,16 @@
 # node-box-api
 
-## Install
+Currently supporting basic Box Content API
 
-`npm install node-box-api`
+Working towards full feature support of Box Content API & Box View API
+
+https://box-content.readme.io/reference
+https://box-view.readme.io/reference
+
+## Install
+```
+npm install node-box-api
+```
 
 ## Setup
 ```javascript
@@ -21,23 +29,23 @@ var box = new Box({
 ### Folders API
 
 After instantiating the Box class you can call API
-resources by call `box.folders`
+resources by calling `box.folders`
 
-#### Listing Root Folder Info
+#### Get Root Folder's Info
 ```javascript
 box.folders.root(function(err, res) {
 	console.log(res);
 });
 ```
 
-#### Listing Folder Info by ID
+#### Get Folder's Info
 ```javascript
 box.folders.info('FOLDER_ID', function(err, res) {
 	console.log(res);
 });
 ```
 
-#### Listing Items in Folder
+#### Get Folder's Items
 ```javascript
 var params = {
 	limit: 100,
@@ -51,6 +59,47 @@ box.folders.items('FOLDER_ID', params, function(err, res) {
 The `params` argument is optional
 ```javascript
 box.folders.items('FOLDER_ID', function(err, res) {
+	console.log(res);
+});
+```
+
+### Files API
+
+After instantiating the Box class you can call API
+resources by calling `box.files`
+
+#### Get File's Info
+```javascript
+box.files.info('FILE_ID', function(err, res) {
+	console.log(res);
+});
+```
+
+#### Download File
+```javascript
+box.files.download('FILE_ID', function(err, res) {
+	console.log(res);
+});
+```
+The download function does accept `params`, however it is
+not currently supported
+
+#### Get Thumbnail
+```javascript
+var params = {
+	min_height: 32,
+	min_width: 32,
+	max_height: 256,
+	max_width: 256,
+	extension: 'jpg'
+};
+box.files.thumbnail('FILE_ID', params, function(err, res) {
+	console.log(res);
+});
+```
+The `params` argument is optional
+```javascript
+box.files.thumbnail('FILE_ID', function(err, res) {
 	console.log(res);
 });
 ```

@@ -1,6 +1,6 @@
 {
   "name": "node-box-api",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Box API for Nodejs",
   "main": "index.js",
   "scripts": {
@@ -11,8 +11,9 @@
     "url": "git+https://github.com/azjones/node-box-api.git"
   },
   "keywords": [
-    "Box",
-    "API"
+    "box",
+    "api",
+    "box.com"
   ],
   "author": "azjones",
   "license": "MIT",

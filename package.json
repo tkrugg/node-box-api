@@ -1,0 +1,26 @@
+{
+  "name": "node-box-api",
+  "version": "1.0.0",
+  "description": "Box API for Nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azjones/node-box-api.git"
+  },
+  "keywords": [
+    "Box",
+    "API"
+  ],
+  "author": "azjones",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/azjones/node-box-api/issues"
+  },
+  "homepage": "https://github.com/azjones/node-box-api#readme",
+  "dependencies": {
+    "superagent": "^1.2.0"
+  }
+}
